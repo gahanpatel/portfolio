@@ -24,14 +24,14 @@ export default function Navbar() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200/60 dark:border-slate-700/60 shadow-sm"
+          ? "bg-parchment/90 dark:bg-forge/90 backdrop-blur-md border-b border-linen dark:border-cinder"
           : "bg-transparent"
       }`}
     >
       <nav className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <a
           href="#hero"
-          className="text-sm font-semibold tracking-tight text-slate-800 dark:text-slate-100 hover:opacity-70 transition-opacity"
+          className="text-sm font-semibold font-heading tracking-tight text-forge dark:text-chalk hover:opacity-70 transition-opacity"
         >
           GP
         </a>
@@ -41,7 +41,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
+              className="text-sm text-char dark:text-dusk hover:text-forge dark:hover:text-chalk transition-colors"
             >
               {link.label}
             </a>

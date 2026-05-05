@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-04T00:00:00Z",
+  "title": "Design System: Gahan Patel Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "ember": {
+        "role": "primary",
+        "displayName": "Ember",
+        "canonical": "oklch(74% 0.16 75)",
+        "tonalRamp": ["#1e1504", "#31200a", "#4e3205", "#714a00", "#9a6500", "#c08000", "#d4a020", "#f0c74e"]
+      },
+      "ember-dim": {
+        "role": "primary",
+        "displayName": "Ember Dim",
+        "canonical": "oklch(68% 0.16 75)",
+        "tonalRamp": ["#1e1504", "#31200a", "#4e3205", "#714a00", "#8f5d00", "#b07500", "#bf8e1c", "#e8b840"]
+      },
+      "ember-subtle": {
+        "role": "primary",
+        "displayName": "Ember Subtle",
+        "canonical": "oklch(20% 0.04 75)",
+        "tonalRamp": ["#14100a", "#1e1504", "#2d2314", "#3d3018", "#52401d", "#6e5820", "#967520", "#c09530"]
+      },
+      "forge": {
+        "role": "neutral",
+        "displayName": "Forge",
+        "canonical": "oklch(13% 0.008 50)",
+        "tonalRamp": ["#100e0b", "#1c1813", "#231f19", "#2e2923", "#3d3730", "#524c45", "#786f66", "#aba49c"]
+      },
+      "coal": {
+        "role": "neutral",
+        "displayName": "Coal",
+        "canonical": "oklch(17% 0.008 50)",
+        "tonalRamp": ["#141210", "#1c1813", "#231f19", "#2e2923", "#3d3730", "#524c45", "#786f66", "#aba49c"]
+      },
+      "ash": {
+        "role": "neutral",
+        "displayName": "Ash",
+        "canonical": "oklch(15% 0.008 50)",
+        "tonalRamp": ["#120f0d", "#1a1611", "#201c17", "#2b2620", "#3a342d", "#4e4840", "#736c62", "#a59e96"]
+      },
+      "cinder": {
+        "role": "neutral",
+        "displayName": "Cinder",
+        "canonical": "oklch(26% 0.009 50)",
+        "tonalRamp": ["#1a1713", "#231f19", "#2e2923", "#342e28", "#3d3730", "#524c45", "#786f66", "#aba49c"]
+      },
+      "chalk": {
+        "role": "neutral",
+        "displayName": "Chalk",
+        "canonical": "oklch(95% 0.005 75)",
+        "tonalRamp": ["#585248", "#7d7770", "#9a9489", "#b7b0a5", "#cac5bb", "#dedad1", "#eee9e1", "#f2ede4"]
+      },
+      "dusk": {
+        "role": "neutral",
+        "displayName": "Dusk",
+        "canonical": "oklch(63% 0.007 60)",
+        "tonalRamp": ["#34302c", "#4a4540", "#5e5a54", "#736e68", "#8a8580", "#9a9086", "#b5b0aa", "#d4cfc8"]
+      },
+      "smoke": {
+        "role": "neutral",
+        "displayName": "Smoke",
+        "canonical": "oklch(45% 0.006 55)",
+        "tonalRamp": ["#242018", "#302c24", "#3e3930", "#4c4740", "#5a5550", "#6b6358", "#857e76", "#a9a29a"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero name only. Never applied elsewhere." },
+      "headline": { "displayName": "Headline", "purpose": "Section anchor headings: 'Hey, I'm Gahan.' and 'Let's work together.'" },
+      "title": { "displayName": "Title", "purpose": "Card headings: project titles, experience role names." },
+      "body": { "displayName": "Body", "purpose": "All descriptive text. Max 72ch per line." },
+      "label": { "displayName": "Label", "purpose": "Section eyebrow labels only. Always uppercase, always Ember." }
+    },
+    "shadows": [
+      {
+        "name": "navbar-lock",
+        "value": "border-bottom: 1px solid #342e28",
+        "purpose": "Appears when the navbar locks on scroll. Tonal line, not a drop shadow."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Default easing for all state transitions. Used for hover, border-color, and color changes."
+      },
+      {
+        "name": "duration-fast",
+        "value": "150ms",
+        "purpose": "Hover and color state transitions."
+      },
+      {
+        "name": "duration-standard",
+        "value": "300ms",
+        "purpose": "Navbar lock transition and scroll-driven entrances."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button: Primary",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary CTA — Resume download, email contact. Ember fill, Forge text.",
+      "html": "<button class=\"ds-btn-primary\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><polyline points=\"7 10 12 15 17 10\"/><line x1=\"12\" y1=\"15\" x2=\"12\" y2=\"3\"/></svg>Resume</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; background: #d4a020; color: #1c1813; padding: 12px 24px; border-radius: 8px; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 14px; font-weight: 600; border: none; cursor: pointer; transition: background 150ms cubic-bezier(0.16, 1, 0.3, 1); text-decoration: none; } .ds-btn-primary:hover { background: #bf8e1c; } .ds-btn-primary:focus-visible { outline: 2px solid #d4a020; outline-offset: 3px; }"
+    },
+    {
+      "name": "Button: Ghost",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action — GitHub, LinkedIn, Email links. Transparent background, Cinder border.",
+      "html": "<button class=\"ds-btn-ghost\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z\"/></svg>GitHub</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #f2ede4; padding: 8px 16px; border-radius: 8px; border: 1px solid #342e28; font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 150ms cubic-bezier(0.16, 1, 0.3, 1), border-color 150ms cubic-bezier(0.16, 1, 0.3, 1); text-decoration: none; } .ds-btn-ghost:hover { background: #342e28; border-color: #3e3830; } .ds-btn-ghost:focus-visible { outline: 2px solid #d4a020; outline-offset: 3px; }"
+    },
+    {
+      "name": "Chip: Skill",
+      "kind": "chip",
+      "refersTo": "chip-skill",
+      "description": "Skill tags in the Skills section. Non-interactive. Hover highlights with Ember.",
+      "html": "<span class=\"ds-chip-skill\">TypeScript</span>",
+      "css": ".ds-chip-skill { display: inline-block; background: #231f19; color: #9a9086; padding: 8px 16px; border-radius: 6px; border: 1px solid #342e28; font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 500; transition: border-color 150ms cubic-bezier(0.16, 1, 0.3, 1), color 150ms cubic-bezier(0.16, 1, 0.3, 1); cursor: default; } .ds-chip-skill:hover { border-color: #d4a020; color: #d4a020; }"
+    },
+    {
+      "name": "Chip: Tech",
+      "kind": "chip",
+      "refersTo": "chip-tech",
+      "description": "Technology tags on project and experience cards. Read-only. Ember Subtle background.",
+      "html": "<span class=\"ds-chip-tech\">FastAPI</span>",
+      "css": ".ds-chip-tech { display: inline-block; background: #2d2314; color: #d4a020; padding: 2px 10px; border-radius: 9999px; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.01em; }"
+    },
+    {
+      "name": "Card: Project",
+      "kind": "card",
+      "refersTo": "card-project",
+      "description": "Project cards with title, description, tech chips, and GitHub link. Title color shifts to Ember on hover.",
+      "html": "<div class=\"ds-card-project\"><div class=\"ds-card-project__header\"><h3 class=\"ds-card-project__title\">TamidTrades</h3><div class=\"ds-card-project__links\"><a href=\"#\" class=\"ds-card-project__link\" aria-label=\"GitHub\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z\"/></svg></a></div></div><p class=\"ds-card-project__desc\">Fantasy stock trading platform with real-time portfolio tracking, leaderboards, and trade execution.</p><div class=\"ds-card-project__tags\"><span class=\"ds-chip-tech\">FastAPI</span><span class=\"ds-chip-tech\">React</span><span class=\"ds-chip-tech\">PostgreSQL</span></div></div>",
+      "css": ".ds-card-project { background: #231f19; border: 1px solid #342e28; border-radius: 12px; padding: 24px; transition: border-color 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-card-project:hover { border-color: rgba(212, 160, 32, 0.45); } .ds-card-project__header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 12px; } .ds-card-project__title { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 16px; font-weight: 600; color: #f2ede4; margin: 0; transition: color 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-card-project:hover .ds-card-project__title { color: #d4a020; } .ds-card-project__links { display: flex; gap: 8px; flex-shrink: 0; } .ds-card-project__link { color: #6b6358; text-decoration: none; transition: color 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-card-project__link:hover { color: #f2ede4; } .ds-card-project__desc { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; color: #9a9086; line-height: 1.65; margin: 0 0 16px 0; } .ds-card-project__tags { display: flex; flex-wrap: wrap; gap: 8px; } .ds-chip-tech { display: inline-block; background: #2d2314; color: #d4a020; padding: 2px 10px; border-radius: 9999px; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 11px; font-weight: 600; }"
+    },
+    {
+      "name": "Card: Experience",
+      "kind": "card",
+      "refersTo": "card-project",
+      "description": "Experience entries. Company name is permanently Ember. Tech chips use neutral slate style.",
+      "html": "<div class=\"ds-card-exp\"><div class=\"ds-card-exp__header\"><div><h3 class=\"ds-card-exp__role\">Backend Engineer</h3><p class=\"ds-card-exp__company\">TAMID Group</p></div><span class=\"ds-card-exp__date\">2024 – Present</span></div><p class=\"ds-card-exp__desc\">Built TamidTrades, a full-stack fantasy stock trading platform with real-time portfolio tracking.</p><div class=\"ds-card-exp__tags\"><span class=\"ds-chip-exp-tag\">FastAPI</span><span class=\"ds-chip-exp-tag\">PostgreSQL</span><span class=\"ds-chip-exp-tag\">Docker</span></div></div>",
+      "css": ".ds-card-exp { background: #231f19; border: 1px solid #342e28; border-radius: 12px; padding: 24px; transition: border-color 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-card-exp:hover { border-color: #3e3830; } .ds-card-exp__header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 8px; flex-wrap: wrap; } .ds-card-exp__role { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 16px; font-weight: 600; color: #f2ede4; margin: 0; } .ds-card-exp__company { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 500; color: #d4a020; margin: 2px 0 0 0; } .ds-card-exp__date { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; color: #6b6358; flex-shrink: 0; } .ds-card-exp__desc { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; color: #9a9086; line-height: 1.65; margin: 0 0 16px 0; } .ds-card-exp__tags { display: flex; flex-wrap: wrap; gap: 8px; } .ds-chip-exp-tag { display: inline-block; background: #2a2520; color: #9a9086; padding: 2px 10px; border-radius: 9999px; font-family: 'Inter', system-ui, sans-serif; font-size: 11px; font-weight: 500; }"
+    },
+    {
+      "name": "Section Label",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "Section eyebrow label. The site's visual signature: Ember, uppercase, tracked wide.",
+      "html": "<p class=\"ds-section-label\">Experience</p>",
+      "css": ".ds-section-label { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #d4a020; margin: 0 0 40px 0; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "button-ghost",
+      "description": "Fixed navbar. Transparent at top, locks with blur+border after 20px scroll.",
+      "html": "<header class=\"ds-nav\"><nav class=\"ds-nav__inner\"><a href=\"#\" class=\"ds-nav__logo\">GP</a><div class=\"ds-nav__links\"><a href=\"#\" class=\"ds-nav__link\">About</a><a href=\"#\" class=\"ds-nav__link\">Experience</a><a href=\"#\" class=\"ds-nav__link\">Projects</a><a href=\"#\" class=\"ds-nav__link\">Skills</a><a href=\"#\" class=\"ds-nav__link\">Contact</a></div></nav></header>",
+      "css": ".ds-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; border-bottom: 1px solid #342e28; background: rgba(28, 24, 19, 0.9); backdrop-filter: blur(12px); } .ds-nav__inner { max-width: 64rem; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; } .ds-nav__logo { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 14px; font-weight: 600; color: #f2ede4; text-decoration: none; transition: opacity 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav__logo:hover { opacity: 0.7; } .ds-nav__links { display: flex; align-items: center; gap: 28px; } .ds-nav__link { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 400; color: #9a9086; text-decoration: none; transition: color 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav__link:hover { color: #f2ede4; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Working Engineer",
+    "overview": "This is a portfolio where the work does the talking. The visual system is dark, warm, and uncluttered — not because dark is fashionable, but because it sets conditions for text and work to surface without interference. A near-black with an amber undertone (Forge, #1c1813) reads as heated iron rather than cold slate. The single accent — a muted amber-gold (Ember, #d4a020) — functions like a highlighter pen: used rarely, and always with intent.\n\nThe typography is confident without being showy. Space Grotesk brings geometric character to headings without tipping into editorial performance; Inter handles body copy with clinical precision. Together they read as someone who chose deliberately, not someone who overthought it.\n\nThe design does not beg for attention. A recruiter opening this page should feel: 'This person knows what they're doing' — not through visual tricks, but through an absence of them.",
+    "keyCharacteristics": [
+      "Warm dark mode: amber undertones in every neutral, no cold blue-black",
+      "Single accent (Ember) used parsimoniously — it marks load-bearing elements only",
+      "Flat surfaces, border-first depth — no decorative shadows",
+      "Space Grotesk + Inter: geometric confidence at heading scale, functional precision at body scale",
+      "672px reading column: comfortable at any viewport, never stretched"
+    ],
+    "rules": [
+      {
+        "name": "The One Ember Rule",
+        "body": "Ember (#d4a020) appears on at most 15% of any screen. It marks section labels, company names, primary CTAs, and title hover states. If you find yourself adding Ember to a second category, remove it from an existing one first.",
+        "section": "colors"
+      },
+      {
+        "name": "The Warm Neutrals Rule",
+        "body": "No neutral in this system is a cool gray. Every background, border, and muted tone is tinted toward H=50-75. A neutral like #6b7280 (Tailwind's gray-500) is a contamination of the palette.",
+        "section": "colors"
+      },
+      {
+        "name": "The No-Scale-Collapse Rule",
+        "body": "The step between Label (11px), Body (15px), Title (16px), Headline (30px), and Display (48px+) must always be 1.25 or greater between adjacent levels. Never add an intermediate size.",
+        "section": "typography"
+      },
+      {
+        "name": "The Label Doctrine",
+        "body": "Section eyebrows are the only uppercase text on the site. No other element uses text-transform: uppercase. Uppercase is a limited resource — spend it in one place or it means nothing anywhere.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "At rest, every element is flat. Shadows appear only in response to state (locked navbar) or genuine structural hierarchy. Cards, sections, and content regions are never lifted.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Border-Before-Shadow Rule",
+        "body": "Before reaching for a shadow, ask: does a border, background tint, or spacing increase solve the same problem? Use that first.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use Ember (#d4a020) exclusively for section eyebrow labels, company names in experience cards, the primary CTA button, and project title hover states.",
+      "Do keep every neutral warm. All background, border, and text tones carry H=50-75 with at least 0.005 chroma.",
+      "Do cap all body and description text at 72ch.",
+      "Do set the hero name in Space Grotesk 700 with -0.03em letter-spacing.",
+      "Do use border tinting and background shifts before reaching for shadows.",
+      "Do keep all project and experience cards at one visual weight."
+    ],
+    "donts": [
+      "Don't use indigo, violet, or blue-purple as an accent. The current indigo-600 (#4f46e5) must be migrated to Ember.",
+      "Don't use neon or glowing accents, frosted glass panels used decoratively, or high-chroma colors on dark backgrounds.",
+      "Don't copy the Linear or Vercel palette directly. Warm amber is intentionally distinct from their cold-slate and violet accent.",
+      "Don't let Ember appear on more than 15% of any screen.",
+      "Don't use pure white (#ffffff) or pure black (#000000).",
+      "Don't add progress bars, skill meters, or percentage counters.",
+      "Don't use border-left or border-right greater than 1px as a colored accent stripe on any card or list item.",
+      "Don't add cool grays from Tailwind's default slate palette without re-tinting toward H=50-75."
+    ]
+  }
+}

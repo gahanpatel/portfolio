@@ -6,13 +6,13 @@ export default function About() {
     <section id="about" className="py-24 px-6">
       <div className="max-w-2xl mx-auto">
         <FadeIn>
-          <h2 className="text-xs font-semibold tracking-widest uppercase text-indigo-600 dark:text-indigo-400 mb-3">
+          <h2 className="text-xs font-semibold font-heading tracking-widest uppercase text-ember-ink dark:text-ember mb-3">
             About
           </h2>
-          <p className="text-3xl font-bold text-slate-900 dark:text-slate-50 mb-6 leading-snug">
+          <p className="text-3xl font-bold font-heading text-forge dark:text-chalk mb-6 leading-snug">
             Hey, I&apos;m Gahan.
           </p>
-          <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+          <p className="text-lg text-char dark:text-dusk leading-relaxed">
             {personalInfo.bio}
           </p>
         </FadeIn>
