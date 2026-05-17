@@ -19,13 +19,13 @@ export default function ThemeToggle() {
     localStorage.setItem("theme", next ? "dark" : "light");
   }
 
-  if (!mounted) return <div className="w-9 h-9" />;
+  if (!mounted) return <div className="w-11 h-11" />;
 
   return (
     <button
       onClick={toggle}
       aria-label="Toggle dark mode"
-      className="w-9 h-9 flex items-center justify-center rounded-lg text-gravel dark:text-dusk hover:bg-bone dark:hover:bg-cinder transition-colors"
+      className="w-11 h-11 flex items-center justify-center rounded-lg text-gravel dark:text-dusk hover:bg-bone dark:hover:bg-cinder transition-colors"
     >
       {dark ? <Sun size={18} /> : <Moon size={18} />}
     </button>

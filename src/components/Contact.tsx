@@ -1,55 +1,49 @@
-import { Mail } from "lucide-react";
-import { GitHubIcon, LinkedInIcon } from "./Icons";
+"use client";
+
+import { useState } from "react";
+import { Mail, Check } from "lucide-react";
+import { LinkedInIcon } from "./Icons";
 import FadeIn from "./FadeIn";
 import { personalInfo } from "@/lib/data";
 
 export default function Contact() {
+  const [copied, setCopied] = useState(false);
+
+  function handleEmailClick() {
+    navigator.clipboard.writeText(personalInfo.email).catch(() => {});
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
+  }
+
   return (
-    <section id="contact" className="py-24 px-6">
+    <section id="contact" className="pt-24 pb-16 px-6">
       <div className="max-w-2xl mx-auto text-center">
         <FadeIn>
-          <h2 className="text-xs font-semibold font-heading tracking-widest uppercase text-ember-ink dark:text-ember mb-4">
-            Contact
+          <h2 className="text-2xl font-bold font-heading text-ember-ink dark:text-ember mb-4">
+            Let&apos;s Connect
           </h2>
-          <p className="text-3xl font-bold font-heading text-forge dark:text-chalk mb-4">
-            Let&apos;s work together.
-          </p>
           <p className="text-char dark:text-dusk mb-10 max-w-md mx-auto">
-            I&apos;m actively looking for software engineering co-ops for Fall&nbsp;2025. Reach out — I&apos;d love to chat.
+            I&apos;m always open to discussing new projects and opportunities!
           </p>
-          <a
-            href={`mailto:${personalInfo.email}`}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium bg-ember-ink text-parchment hover:bg-ember-ink-deep dark:bg-ember dark:text-forge dark:hover:bg-ember-dim transition-colors mb-12"
-          >
-            <Mail size={15} />
-            {personalInfo.email}
-          </a>
-        </FadeIn>
-
-        <FadeIn delay={100}>
-          <div className="flex items-center justify-center gap-5 pt-6 border-t border-linen dark:border-cinder">
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <a
-              href={personalInfo.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm text-gravel dark:text-dusk hover:text-forge dark:hover:text-chalk transition-colors"
+              href={`mailto:${personalInfo.email}`}
+              onClick={handleEmailClick}
+              className="inline-flex items-center gap-2 px-6 py-3 min-h-[44px] rounded-lg text-sm font-medium bg-ember-ink text-parchment hover:bg-ember-ink-deep dark:bg-ember dark:text-forge dark:hover:bg-ember-dim transition-colors"
             >
-              <GitHubIcon size={15} />
-              GitHub
+              {copied ? <Check size={15} /> : <Mail size={15} />}
+              {copied ? "Copied!" : personalInfo.email}
             </a>
-            <a
+<a
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm text-gravel dark:text-dusk hover:text-forge dark:hover:text-chalk transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 min-h-[44px] rounded-lg text-sm font-medium bg-ember-ink text-parchment hover:bg-ember-ink-deep dark:bg-ember dark:text-forge dark:hover:bg-ember-dim transition-colors"
             >
               <LinkedInIcon size={15} />
               LinkedIn
             </a>
           </div>
-          <p className="mt-6 text-xs text-gravel dark:text-smoke">
-            Built with Next.js &amp; Tailwind CSS
-          </p>
         </FadeIn>
       </div>
     </section>

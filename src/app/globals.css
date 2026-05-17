@@ -49,3 +49,24 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+:focus-visible {
+  outline: 2px solid var(--color-ember-ink);
+  outline-offset: 3px;
+}
+
+html.dark :focus-visible {
+  outline-color: var(--color-ember);
+}
+
+@keyframes idle-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 oklch(74% 0.16 75 / 0); }
+  50% { box-shadow: 0 0 0 5px oklch(74% 0.16 75 / 0.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

@@ -1,0 +1,15 @@
+/* TEAM */
+Name: Gahan Patel
+Role: Software Engineer
+Location: Boston, MA (from New Orleans)
+Contact: patel.gah [at] northeastern.edu
+GitHub: github.com/gahanpatel
+
+/* THANKS */
+Next.js · Tailwind CSS · Vercel · Space Grotesk
+
+/* SITE */
+Language: TypeScript
+Framework: Next.js 16
+Styles: Tailwind CSS v4
+Built: 2025

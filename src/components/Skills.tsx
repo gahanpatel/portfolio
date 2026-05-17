@@ -6,22 +6,32 @@ export default function Skills() {
     <section id="skills" className="py-24 px-6 bg-bone dark:bg-ash">
       <div className="max-w-2xl mx-auto">
         <FadeIn>
-          <h2 className="text-xs font-semibold font-heading tracking-widest uppercase text-ember-ink dark:text-ember mb-10">
+          <h2 className="text-2xl font-bold font-heading text-ember-ink dark:text-ember mb-10">
             Skills
           </h2>
         </FadeIn>
-        <FadeIn delay={100}>
-          <div className="flex flex-wrap gap-3">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="px-4 py-2 text-sm font-medium rounded-lg border border-linen dark:border-cinder bg-vellum dark:bg-coal text-char dark:text-dusk hover:border-ember-ink dark:hover:border-ember hover:text-ember-ink dark:hover:text-ember transition-colors cursor-default"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </FadeIn>
+
+        <div className="space-y-6">
+          {skills.map((group, i) => (
+            <FadeIn key={group.category} delay={i * 80}>
+              <div className="sm:grid sm:grid-cols-[128px_1fr] sm:gap-8 items-start">
+                <p className="text-xs font-semibold font-heading tracking-widest uppercase text-gravel dark:text-smoke sm:pt-2 mb-2 sm:mb-0">
+                  {group.category}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {group.items.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1.5 text-sm font-medium rounded-lg border border-linen dark:border-cinder bg-vellum dark:bg-coal text-char dark:text-dusk hover:border-ember-ink dark:hover:border-ember hover:text-ember-ink dark:hover:text-ember transition-colors cursor-default"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
       </div>
     </section>
   );

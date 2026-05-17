@@ -1,97 +1,147 @@
 export const personalInfo = {
   name: "Gahan Patel",
-  tagline: "Building things that matter — software that scales, systems that ship.",
+  tagline: "CS + Business at Northeastern. Building backend systems and full-stack products.",
   email: "patel.gah@northeastern.edu",
   github: "https://github.com/gahanpatel",
   linkedin: "https://linkedin.com/in/gahanpatel",
   resumeUrl: "/resume.pdf",
   location: "Boston, MA",
   school: "Northeastern University",
-  bio: "Second-year CS and Business student at Northeastern University, originally from New Orleans. I build full-stack products and backend systems — currently seeking software engineering co-ops where I can contribute to real problems at scale.",
+  gpa: "3.93",
+  siteUrl: "https://gahanpatel.com",
+  bio: "CS and Business student at Northeastern. I build full-stack products and backend systems, mostly things I'd want to use myself.",
+  bioInterests: "From New Orleans — which means strong opinions about food and a high tolerance for humidity. Off-screen: 70,000 Spotify minutes last year, slowly working through the Bhagavad Gita, and I started running a few months ago (still in the painful part).",
 };
 
 export const experiences = [
   {
-    id: "tamid-engineer",
-    role: "Backend Engineer",
-    company: "TAMID Group",
-    date: "2024 – Present",
+    id: "oasis-instructor",
+    role: "Web Developer Instructor",
+    company: "Oasis at Northeastern",
+    date: "Jan 2026 – Apr 2026",
     description:
-      "Built TamidTrades, a full-stack fantasy stock trading platform with real-time portfolio tracking. Designed REST APIs with FastAPI, managed PostgreSQL schemas, and deployed on Docker.",
-    tags: ["FastAPI", "PostgreSQL", "Docker", "Python"],
+      "Instructed 10 developers across two teams building a campus marketplace and a professor review platform, guiding architecture decisions and database design.",
+    tags: ["React", "Git", "Full-Stack", "Mentorship"],
   },
   {
     id: "nur-engineer",
     role: "Software Engineer",
     company: "Northeastern Electric Racing",
-    date: "2024 – Present",
+    date: "Sept 2025 – Dec 2025",
     description:
-      "Developing data pipeline and telemetry tooling for the formula-style electric race car. Focused on real-time sensor data processing and visualization.",
-    tags: ["Python", "TypeScript", "React"],
+      "Redesigned the club website with React and TypeScript, improving navigation and scheduling for 300+ members. Added calendar event modals with quick-access links to Zoom meetings, documents, and status tracking.",
+    tags: ["React", "TypeScript", "Git"],
   },
   {
-    id: "dell-excel",
-    role: "Excel with Dell Program",
-    company: "Dell Technologies",
-    date: "2024",
+    id: "handshake-ai",
+    role: "AI Trainer",
+    company: "Handshake",
+    date: "Oct 2025 – Dec 2025",
     description:
-      "Participated in Dell's Excel program, gaining exposure to enterprise software engineering practices, mentorship, and product development workflows.",
-    tags: ["Professional Development"],
+      "Developed and evaluated prompts to assess the performance of large language models.",
+    tags: ["LLMs", "Prompt Engineering"],
   },
   {
-    id: "oasis-mentor",
-    role: "Project Mentor",
-    company: "Oasis @ Northeastern",
-    date: "2024 – Present",
+    id: "neu-research",
+    role: "Research Assistant, Outreach Team",
+    company: "Northeastern University Oakland",
+    date: "Apr 2025 – Jun 2025",
     description:
-      "Mentoring student engineering teams on full-stack web projects, conducting code reviews, and guiding architecture decisions for club members.",
-    tags: ["Mentorship", "Full-Stack", "Code Review"],
+      "Conducted 10 interviews and cold-called 50+ Emeryville businesses to assess challenges faced by entrepreneurs. Synthesized findings into recommendations used by the city to support local BIPOC entrepreneurs.",
+    tags: ["Research", "Community Outreach"],
+  },
+  {
+    id: "pawhacks",
+    role: "Tech and Website Team",
+    company: "PawHacks",
+    date: "Jan 2025 – Mar 2025",
+    description:
+      "Organized the largest hackathon on Northeastern's Oakland campus, coordinating logistics for 80+ participants. Built the Devpost submission page with judging criteria that drove 20+ project submissions.",
+    tags: ["Event Organizing", "Devpost"],
+  },
+  {
+    id: "cypress-inn",
+    role: "Assistant Manager",
+    company: "Cypress Inn Motel",
+    date: "Jan 2022 – Aug 2024",
+    description:
+      "Managed day-to-day operations, built revenue and expense tracking in Excel, and prepared monthly P&L statements that contributed to a 15% reduction in operating costs.",
+    tags: ["Excel", "Financial Analysis", "Operations"],
   },
 ];
 
 export const projects = [
   {
-    id: "tamid-trades",
-    title: "TamidTrades",
-    description:
-      "Fantasy stock trading platform with real-time portfolio tracking, leaderboards, and trade execution. Built for the TAMID consulting group.",
-    tags: ["FastAPI", "React", "PostgreSQL", "Docker", "Python"],
-    github: "https://github.com/gahanpatel/tamidtrades",
-    live: "",
-  },
-  {
     id: "coffee-chat",
-    title: "TAMID Coffee Chat Matcher",
+    title: "Coffee Chat Matcher",
     description:
-      "Automated matching system that pairs TAMID members for weekly coffee chats based on shared interests, tracks participation, and sends email notifications.",
-    tags: ["Python", "Supabase", "TypeScript", "Next.js"],
-    github: "https://github.com/gahanpatel/coffee-chat-matcher",
+      "Profile-matching platform for 200+ TAMID members using OpenAI embeddings to generate 1,536-dimensional vectors from Slack bios, ranking matches by cosine similarity. Built a Python scraper to bulk-download 338 photos from Notion and a React frontend with search and ranked profile cards.",
+    tags: ["Python", "React", "Supabase", "OpenAI"],
+    github: "https://github.com/rioquinn11/tamidchatmatcher",
     live: "",
   },
   {
     id: "music-matcher",
     title: "AI Music Matcher",
     description:
-      "AI-powered app that analyzes your listening history and mood to recommend new songs and build personalized playlists using Spotify and Claude APIs.",
-    tags: ["Next.js", "TypeScript", "Tailwind", "Spotify API", "Claude API"],
-    github: "https://github.com/gahanpatel/ai-music-matcher",
+      "Analyzes an uploaded image's visual characteristics through OpenAI Vision API, then scores and ranks songs from a Spotify playlist to match the aesthetic. Spring Boot backend with multi-API support and fallback logic across 1,000+ track playlists.",
+    tags: ["Java", "Spring Boot", "React", "OpenAI", "Spotify API"],
+    github: "https://github.com/gahanpatel/song-picker",
     live: "",
+  },
+  {
+    id: "fantasy-stock-league",
+    title: "Fantasy Stock League",
+    description:
+      "Fantasy stock trading platform with real-time S&P 500 pricing via Yahoo Finance API. Built with Next.js and FastAPI, featuring JWT auth, buy/sell execution, an analytics dashboard computing Sharpe ratio, P&L, and sector allocation, and a leaderboard to compete against other traders. Deployed on Vercel with CI/CD.",
+    tags: ["Python", "FastAPI", "PostgreSQL", "Next.js", "Vercel"],
+    github: "https://github.com/gahanpatel/fantasy-stock",
+    live: "",
+    image: "/fantasy-stock-league.png",
+  },
+];
+
+export const practices = [
+  {
+    name: "Running",
+    note: "Getting into distance. Building the habit one early morning at a time.",
+    image: "/strava.png",
+  },
+  {
+    name: "Lifting",
+    note: "Consistent. The gym is the one thing I don't skip.",
+  },
+  {
+    name: "Reading",
+    note: "Currently working through the Bhagavad Gita. Taking it slowly.",
+  },
+  {
+    name: "Music",
+    note: "70,000 Spotify minutes this year. Probably more by the time you read this.",
+    image: "/IMG_8453.jpg",
+  },
+  {
+    name: "Cricket",
+    note: "Grew up on it. Always down for a game.",
+  },
+  {
+    name: "Catan",
+    note: "Will argue about opening strategy for longer than is healthy.",
+    image: "/catan.jpg",
   },
 ];
 
 export const skills = [
-  "Python",
-  "Java",
-  "TypeScript",
-  "JavaScript",
-  "React",
-  "Next.js",
-  "FastAPI",
-  "Spring Boot",
-  "PostgreSQL",
-  "Supabase",
-  "Docker",
-  "Git",
-  "Tailwind CSS",
-  "REST APIs",
+  {
+    category: "Languages",
+    items: ["Java", "Python", "SQL", "C", "Kotlin", "JavaScript", "TypeScript"],
+  },
+  {
+    category: "Frameworks",
+    items: ["Spring Boot", "FastAPI", "React", "Next.js", "Tailwind CSS", "NumPy", "JUnit"],
+  },
+  {
+    category: "Tools & Infra",
+    items: ["Docker", "Git", "PostgreSQL", "Supabase", "Vercel", "Railway", "IntelliJ"],
+  },
 ];

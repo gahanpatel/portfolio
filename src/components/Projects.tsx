@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { ExternalLink } from "lucide-react";
-import { GitHubIcon } from "./Icons";
 import FadeIn from "./FadeIn";
 import { projects } from "@/lib/data";
 
@@ -8,7 +8,7 @@ export default function Projects() {
     <section id="projects" className="py-24 px-6">
       <div className="max-w-2xl mx-auto">
         <FadeIn>
-          <h2 className="text-xs font-semibold font-heading tracking-widest uppercase text-ember-ink dark:text-ember mb-10">
+          <h2 className="text-2xl font-bold font-heading text-ember-ink dark:text-ember mb-10">
             Projects
           </h2>
         </FadeIn>
@@ -18,7 +18,7 @@ export default function Projects() {
             <FadeIn key={project.id} delay={i * 80}>
               <div className="group p-6 rounded-xl border border-linen dark:border-cinder bg-vellum dark:bg-coal hover:border-ember-ink/50 dark:hover:border-ember/45 transition-colors">
                 <div className="flex items-start justify-between gap-4 mb-3">
-                  <h3 className="font-semibold font-heading text-forge dark:text-chalk group-hover:text-ember-ink dark:group-hover:text-ember transition-colors">
+                  <h3 className="text-lg font-semibold font-heading text-forge dark:text-chalk">
                     {project.title}
                   </h3>
                   <div className="flex items-center gap-2 shrink-0">
@@ -27,10 +27,9 @@ export default function Projects() {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="GitHub"
-                        className="text-gravel hover:text-forge dark:hover:text-chalk transition-colors"
+                        className="flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-md border border-ember-ink/40 dark:border-ember/40 text-ember-ink dark:text-ember hover:bg-ember-ink-subtle dark:hover:bg-ember-subtle transition-colors"
                       >
-                        <GitHubIcon size={16} />
+                        GitHub <ExternalLink size={11} />
                       </a>
                     )}
                     {project.live && (
@@ -49,6 +48,17 @@ export default function Projects() {
                 <p className="text-sm text-char dark:text-dusk leading-relaxed mb-4">
                   {project.description}
                 </p>
+                {project.image && (
+                  <div className="mb-4 rounded-lg overflow-hidden border border-linen dark:border-cinder">
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} screenshot`}
+                      width={1200}
+                      height={675}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                )}
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
