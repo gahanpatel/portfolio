@@ -134,14 +134,14 @@ export const practices = [
 export const skills = [
   {
     category: "Languages",
-    items: ["Java", "Python", "SQL", "C", "Kotlin", "JavaScript", "TypeScript"],
+    items: ["Java", "Python", "SQL", "C", "Kotlin", "JavaScript", "TypeScript", "HTML", "CSS"],
   },
   {
     category: "Frameworks",
-    items: ["Spring Boot", "FastAPI", "React", "Next.js", "Tailwind CSS", "NumPy", "JUnit"],
+    items: ["Spring Boot", "FastAPI", "Flask", "React", "Next.js", "Tailwind CSS", "NumPy", "JUnit"],
   },
   {
-    category: "Tools & Infra",
-    items: ["Docker", "Git", "PostgreSQL", "Supabase", "Vercel", "Railway", "IntelliJ"],
+    category: "Tools",
+    items: ["AWS", "Docker", "Git", "Vercel", "Railway", "PostgreSQL", "MySQL", "Supabase", "Claude Code"],
   },
 ];
