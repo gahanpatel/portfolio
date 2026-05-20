@@ -88,6 +88,7 @@ export const projects = [
     tags: ["Java", "Spring Boot", "React", "OpenAI", "Spotify API"],
     github: "https://github.com/gahanpatel/song-picker",
     live: "",
+    image: "/music-matcher.png",
   },
   {
     id: "fantasy-stock-league",
@@ -110,6 +111,8 @@ export const practices = [
   {
     name: "Lifting",
     note: "Consistent. The gym is the one thing I don't skip.",
+    image: "/IMG_0637.jpg",
+    imagePosition: "bottom",
   },
   {
     name: "Reading",
@@ -121,7 +124,7 @@ export const practices = [
     image: "/IMG_8453.jpg",
   },
   {
-    name: "Cricket",
+    name: "Basketball",
     note: "Grew up on it. Always down for a game.",
   },
   {

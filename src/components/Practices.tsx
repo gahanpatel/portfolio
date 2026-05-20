@@ -23,7 +23,7 @@ export default function Practices() {
                       alt={item.name}
                       width={400}
                       height={533}
-                      className="h-full w-auto object-contain"
+                      className={`h-full w-full ${item.imagePosition ? `object-cover object-${item.imagePosition}` : "w-auto object-contain"}`}
                     />
                   ) : (
                     <span className="text-xs text-gravel dark:text-smoke">Soon</span>
