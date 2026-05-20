@@ -88,7 +88,7 @@ export const projects = [
     tags: ["Java", "Spring Boot", "React", "OpenAI", "Spotify API"],
     github: "https://github.com/gahanpatel/song-picker",
     live: "",
-    image: "/music-matcher.png",
+    image: "/aimusic.png",
   },
   {
     id: "fantasy-stock-league",
@@ -126,6 +126,8 @@ export const practices = [
   {
     name: "Basketball",
     note: "Grew up on it. Always down for a game.",
+    image: "/IMG_0641.jpg",
+    imagePosition: "center 35%",
   },
   {
     name: "Catan",
