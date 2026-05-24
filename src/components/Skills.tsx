@@ -3,10 +3,10 @@ import { skills } from "@/lib/data";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 bg-bone dark:bg-ash">
+    <section id="skills" className="py-16 px-6 bg-bone dark:bg-ash">
       <div className="max-w-2xl mx-auto">
-        <FadeIn>
-          <h2 className="text-2xl font-bold font-heading text-ember-ink dark:text-ember mb-10">
+        <FadeIn wipe>
+          <h2 className="text-3xl font-bold font-heading tracking-tight text-ember-ink dark:text-ember mb-8">
             Skills
           </h2>
         </FadeIn>
@@ -22,7 +22,7 @@ export default function Skills() {
                   {group.items.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1.5 text-sm font-medium rounded-lg border border-linen dark:border-cinder bg-vellum dark:bg-coal text-char dark:text-dusk hover:border-ember-ink dark:hover:border-ember hover:text-ember-ink dark:hover:text-ember transition-colors cursor-default"
+                      className="px-3 py-1.5 text-sm font-medium rounded-lg border border-linen dark:border-cinder bg-vellum dark:bg-coal text-char dark:text-dusk hover:border-ember-ink dark:hover:border-ember hover:text-ember-ink dark:hover:text-ember hover:scale-[1.03] transition duration-200 cursor-default"
                     >
                       {skill}
                     </span>

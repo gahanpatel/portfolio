@@ -19,26 +19,27 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const ids = navLinks.map((l) => l.href.slice(1));
+    const onScroll = () => {
+      setScrolled(window.scrollY > 20);
+
+      const nearBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80;
+      if (nearBottom) {
+        setActiveSection("contact");
+        return;
+      }
+
+      const threshold = window.innerHeight * 0.45;
+      let active = "";
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= threshold) active = id;
+      }
+      setActiveSection(active);
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    const ids = navLinks.map((l) => l.href.slice(1));
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActiveSection(entry.target.id);
-        });
-      },
-      { rootMargin: "-40% 0px -60% 0px", threshold: 0 }
-    );
-    ids.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -74,13 +75,14 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-sm transition-colors ${
+                className={`relative text-sm transition-colors ${
                   isActive
                     ? "text-ember-ink dark:text-ember font-medium"
                     : "text-char dark:text-dusk hover:text-forge dark:hover:text-chalk"
                 }`}
               >
                 {link.label}
+                <span className={`absolute -bottom-1 left-0 right-0 h-px bg-ember-ink dark:bg-ember origin-left transition-transform duration-300 ${isActive ? "scale-x-100" : "scale-x-0"}`} />
               </a>
             );
           })}

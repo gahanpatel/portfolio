@@ -10,6 +10,7 @@ import MusicPlayer from "@/components/MusicPlayer";
 export default function Home() {
   return (
     <>
+      <div className="scroll-progress" />
       <Navbar />
       <main id="main-content">
         <Hero />

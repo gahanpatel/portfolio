@@ -10,13 +10,16 @@ export default function Contact() {
   const [copied, setCopied] = useState(false);
 
   function handleEmailClick() {
-    navigator.clipboard.writeText(personalInfo.email).catch(() => {});
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1500);
+    navigator.clipboard.writeText(personalInfo.email)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+      })
+      .catch(() => {});
   }
 
   return (
-    <section id="contact" className="pt-24 pb-16 px-6">
+    <section id="contact" className="pt-20 pb-28 px-6">
       <div className="max-w-2xl mx-auto text-center">
         <FadeIn>
           <h2 className="text-2xl font-bold font-heading text-ember-ink dark:text-ember mb-4">
@@ -31,7 +34,9 @@ export default function Contact() {
               onClick={handleEmailClick}
               className="inline-flex items-center gap-2 px-6 py-3 min-h-[44px] rounded-lg text-sm font-medium bg-ember-ink text-parchment hover:bg-ember-ink-deep dark:bg-ember dark:text-forge dark:hover:bg-ember-dim transition-colors"
             >
-              {copied ? <Check size={15} /> : <Mail size={15} />}
+              <span key={copied ? "check" : "mail"} className="inline-flex" style={{ animation: "icon-pop 0.25s cubic-bezier(0.25, 1, 0.5, 1) both" }}>
+                {copied ? <Check size={15} /> : <Mail size={15} />}
+              </span>
               {copied ? "Copied!" : personalInfo.email}
             </a>
 <a

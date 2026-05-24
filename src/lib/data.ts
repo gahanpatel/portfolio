@@ -9,7 +9,7 @@ export const personalInfo = {
   school: "Northeastern University",
   gpa: "3.93",
   siteUrl: "https://gahanpatel.com",
-  bio: "CS and Business student at Northeastern. I build full-stack products and backend systems, mostly things I'd want to use myself.",
+  bio: "Third-year CS and Business student at Northeastern. I build full-stack products and backend systems, mostly things I'd want to use myself.",
   bioInterests: "From New Orleans — which means strong opinions about food and a high tolerance for humidity. Off-screen: 70,000 Spotify minutes last year, slowly working through the Bhagavad Gita, and I started running a few months ago (still in the painful part).",
 };
 
@@ -76,7 +76,7 @@ export const projects = [
     title: "Coffee Chat Matcher",
     description:
       "Profile-matching platform for 200+ TAMID members using OpenAI embeddings to generate 1,536-dimensional vectors from Slack bios, ranking matches by cosine similarity. Built a Python scraper to bulk-download 338 photos from Notion and a React frontend with search and ranked profile cards.",
-    tags: ["Python", "React", "Supabase", "OpenAI"],
+    tags: ["Python", "Flask", "React", "Supabase", "OpenAI"],
     github: "https://github.com/rioquinn11/tamidchatmatcher",
     live: "",
   },
@@ -88,7 +88,7 @@ export const projects = [
     tags: ["Java", "Spring Boot", "React", "OpenAI", "Spotify API"],
     github: "https://github.com/gahanpatel/song-picker",
     live: "",
-    image: "/aimusic.png",
+    image: "/songpicker-v2.png",
   },
   {
     id: "fantasy-stock-league",
@@ -98,7 +98,7 @@ export const projects = [
     tags: ["Python", "FastAPI", "PostgreSQL", "Next.js", "Vercel"],
     github: "https://github.com/gahanpatel/fantasy-stock",
     live: "",
-    image: "/fantasy-stock-league.png",
+    images: ["/fantasy-dark-4.png", "/fantasy-dark-2.2.png"],
   },
 ];
 
@@ -111,22 +111,23 @@ export const practices = [
   {
     name: "Lifting",
     note: "Consistent. The gym is the one thing I don't skip.",
-    image: "/IMG_0637.jpg",
+    image: "/lifting.jpg",
     imagePosition: "bottom",
   },
   {
     name: "Reading",
     note: "Currently working through the Bhagavad Gita. Taking it slowly.",
+    image: "/reading.jpg",
   },
   {
     name: "Music",
     note: "70,000 Spotify minutes this year. Probably more by the time you read this.",
-    image: "/IMG_8453.jpg",
+    image: "/wrapped.jpg",
   },
   {
     name: "Basketball",
     note: "Grew up on it. Always down for a game.",
-    image: "/IMG_0641.jpg",
+    image: "/baskebtall.jpg",
     imagePosition: "center 35%",
   },
   {

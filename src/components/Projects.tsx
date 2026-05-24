@@ -1,22 +1,23 @@
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import FadeIn from "./FadeIn";
+import ProjectImages from "./ProjectImages";
 import { projects } from "@/lib/data";
 
 export default function Projects() {
   return (
     <section id="projects" className="py-24 px-6">
       <div className="max-w-2xl mx-auto">
-        <FadeIn>
-          <h2 className="text-2xl font-bold font-heading text-ember-ink dark:text-ember mb-10">
+        <FadeIn wipe>
+          <h2 className="text-3xl font-bold font-heading tracking-tight text-ember-ink dark:text-ember mb-12">
             Projects
           </h2>
         </FadeIn>
 
-        <div className="space-y-6">
+        <div className="space-y-8">
           {projects.map((project, i) => (
             <FadeIn key={project.id} delay={i * 80}>
-              <div className="group p-6 rounded-xl border border-linen dark:border-cinder bg-vellum dark:bg-coal hover:border-ember-ink/50 dark:hover:border-ember/45 transition-colors">
+              <div className="group p-6 rounded-xl border border-linen dark:border-cinder bg-vellum dark:bg-coal hover:border-ember-ink/50 dark:hover:border-ember/45 hover:-translate-y-0.5 transition duration-200">
                 <div className="flex items-start justify-between gap-4 mb-3">
                   <h3 className="text-lg font-semibold font-heading text-forge dark:text-chalk">
                     {project.title}
@@ -48,6 +49,9 @@ export default function Projects() {
                 <p className="text-sm text-char dark:text-dusk leading-relaxed mb-4">
                   {project.description}
                 </p>
+                {project.images && (
+                  <ProjectImages images={project.images} title={project.title} />
+                )}
                 {project.image && (
                   <div className="mb-4 rounded-lg overflow-hidden border border-linen dark:border-cinder">
                     <Image

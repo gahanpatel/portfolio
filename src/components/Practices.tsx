@@ -6,8 +6,8 @@ export default function Practices() {
   return (
     <section id="practices" className="py-24 px-6 bg-bone dark:bg-ash">
       <div className="max-w-2xl mx-auto">
-        <FadeIn>
-          <h2 className="text-2xl font-bold font-heading text-ember-ink dark:text-ember mb-10">
+        <FadeIn wipe>
+          <h2 className="text-3xl font-bold font-heading tracking-tight text-ember-ink dark:text-ember mb-10">
             Interests
           </h2>
         </FadeIn>
@@ -15,7 +15,7 @@ export default function Practices() {
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           {practices.map((item, i) => (
             <FadeIn key={item.name} delay={i * 60}>
-              <div className="rounded-xl border border-linen dark:border-cinder bg-vellum dark:bg-coal overflow-hidden">
+              <div className="rounded-xl border border-linen dark:border-cinder bg-vellum dark:bg-coal overflow-hidden group">
                 <div className="aspect-[3/4] bg-linen dark:bg-cinder flex items-center justify-center overflow-hidden">
                   {item.image ? (
                     <Image
@@ -23,7 +23,7 @@ export default function Practices() {
                       alt={item.name}
                       width={400}
                       height={533}
-                      className={`h-full w-full ${item.imagePosition ? "object-cover" : "w-auto object-contain"}`}
+                      className={`h-full w-full transition-transform duration-500 group-hover:scale-105 ${item.imagePosition ? "object-cover" : "w-auto object-contain"}`}
                       style={item.imagePosition ? { objectPosition: item.imagePosition } : undefined}
                     />
                   ) : (
