@@ -29,11 +29,8 @@ export default function Hero() {
           <FadeIn delay={180}>
             <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:justify-between gap-10">
               <div className="flex-1">
-                <p className="text-lg text-char dark:text-dusk leading-relaxed mb-4">
-                  {personalInfo.bio}
-                </p>
                 <p className="text-lg text-char dark:text-dusk leading-relaxed">
-                  {personalInfo.bioInterests}
+                  {personalInfo.bio}
                 </p>
               </div>
               <div className="shrink-0">

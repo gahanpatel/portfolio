@@ -5,7 +5,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-16 px-6 bg-bone dark:bg-ash">
       <div className="max-w-2xl mx-auto">
-        <FadeIn wipe>
+        <FadeIn>
           <h2 className="text-3xl font-bold font-heading tracking-tight text-ember-ink dark:text-ember mb-8">
             Skills
           </h2>

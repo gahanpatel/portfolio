@@ -9,11 +9,29 @@ export const personalInfo = {
   school: "Northeastern University",
   gpa: "3.93",
   siteUrl: "https://gahanpatel.com",
-  bio: "Third-year CS and Business student at Northeastern. I build full-stack products and backend systems, mostly things I'd want to use myself.",
-  bioInterests: "From New Orleans — which means strong opinions about food and a high tolerance for humidity. Off-screen: 70,000 Spotify minutes last year, slowly working through the Bhagavad Gita, and I started running a few months ago (still in the painful part).",
+  bio: "Hey, I am a third-year CS and Business student at Northeastern. Passionate about writing code that makes a real difference: building products that are genuinely useful and improve people's lives.",
+  bioInterests: "From New Orleans. Running, slowly working through the Bhagavad Gita, and 70,000 Spotify minutes last year.",
 };
 
 export const experiences = [
+  {
+    id: "liaizon-fullstack",
+    role: "Full Stack Developer",
+    company: "Liaizon",
+    date: "Jun 2026 – Present",
+    description:
+      "Built Posting Rituals, a recurring video commitment feature backed by a direct-to-S3 pipeline with async ffmpeg transcoding. Shipped a private referral system in FastAPI and SQLModel where trusted contacts vouch on profiles.",
+    tags: ["FastAPI", "SQLModel", "Python", "AWS S3", "pytest"],
+  },
+  {
+    id: "ticker-intern",
+    role: "Software Engineering Intern",
+    company: "ticker",
+    date: "May 2026 – Present",
+    description:
+      "Shipped a Groups feature across 8 React Native screens and 58 Spring Boot endpoints, and built Learning Mode, a delta-synced financial glossary cutting term load to under 45ms.",
+    tags: ["React Native", "Spring Boot", "Java", "MongoDB", "JUnit"],
+  },
   {
     id: "oasis-instructor",
     role: "Web Developer Instructor",
@@ -72,15 +90,6 @@ export const experiences = [
 
 export const projects = [
   {
-    id: "coffee-chat",
-    title: "Coffee Chat Matcher",
-    description:
-      "Profile-matching platform for 200+ TAMID members using OpenAI embeddings to generate 1,536-dimensional vectors from Slack bios, ranking matches by cosine similarity. Built a Python scraper to bulk-download 338 photos from Notion and a React frontend with search and ranked profile cards.",
-    tags: ["Python", "Flask", "React", "Supabase", "OpenAI"],
-    github: "https://github.com/rioquinn11/tamidchatmatcher",
-    live: "",
-  },
-  {
     id: "music-matcher",
     title: "AI Music Matcher",
     description:
@@ -100,6 +109,15 @@ export const projects = [
     live: "",
     images: ["/fantasy-dark-4.png", "/fantasy-dark-2.2.png"],
   },
+  {
+    id: "coffee-chat",
+    title: "Coffee Chat Matcher",
+    description:
+      "Profile-matching platform for 200+ TAMID members using OpenAI embeddings to generate 1,536-dimensional vectors from Slack bios, ranking matches by cosine similarity. Built a Python scraper to bulk-download 338 photos from Notion and a React frontend with search and ranked profile cards.",
+    tags: ["Python", "Flask", "React", "Supabase", "OpenAI"],
+    github: "https://github.com/rioquinn11/tamidchatmatcher",
+    live: "",
+  },
 ];
 
 export const practices = [
@@ -110,8 +128,8 @@ export const practices = [
   },
   {
     name: "Lifting",
-    note: "Consistent. The gym is the one thing I don't skip.",
-    image: "/lifting.jpg",
+    note: "Trying to stay consistent.",
+    image: "/lifting2.png",
     imagePosition: "bottom",
   },
   {
@@ -132,7 +150,7 @@ export const practices = [
   },
   {
     name: "Catan",
-    note: "Will argue about opening strategy for longer than is healthy.",
+    note: "Longest road is always mine.",
     image: "/catan.jpg",
   },
 ];
@@ -144,10 +162,14 @@ export const skills = [
   },
   {
     category: "Frameworks",
-    items: ["Spring Boot", "FastAPI", "Flask", "React", "Next.js", "Tailwind CSS", "NumPy", "JUnit"],
+    items: ["Spring Boot", "FastAPI", "Flask", "React", "React Native", "Next.js", "Expo", "Tailwind CSS", "NumPy", "JUnit"],
+  },
+  {
+    category: "Databases",
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Supabase"],
   },
   {
     category: "Tools",
-    items: ["AWS", "Docker", "Git", "Vercel", "Railway", "PostgreSQL", "MySQL", "Supabase", "Claude Code"],
+    items: ["AWS", "Google Cloud Storage", "Docker", "Git", "Vercel", "Railway", "Claude Code"],
   },
 ];

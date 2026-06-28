@@ -8,8 +8,8 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24 px-6">
       <div className="max-w-2xl mx-auto">
-        <FadeIn wipe>
-          <h2 className="text-3xl font-bold font-heading tracking-tight text-ember-ink dark:text-ember mb-12">
+        <FadeIn>
+          <h2 className="text-3xl font-bold font-heading tracking-tight text-ember-ink dark:text-ember mb-12 pl-6">
             Projects
           </h2>
         </FadeIn>

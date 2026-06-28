@@ -5,8 +5,8 @@ export default function Experience() {
   return (
     <section id="experience" className="py-20 px-6 bg-bone dark:bg-ash">
       <div className="max-w-2xl mx-auto">
-        <FadeIn wipe>
-          <h2 className="text-3xl font-bold font-heading tracking-tight text-ember-ink dark:text-ember mb-8">
+        <FadeIn>
+          <h2 className="text-3xl font-bold font-heading tracking-tight text-ember-ink dark:text-ember mb-8 pl-5">
             Experience
           </h2>
         </FadeIn>
