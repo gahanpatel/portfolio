@@ -24,18 +24,18 @@ export default function Experience() {
                       {exp.company}
                     </p>
                   </div>
-                  <span className="text-sm text-gravel dark:text-smoke shrink-0">
+                  <span className="text-sm tabular-nums text-gravel dark:text-smoke shrink-0">
                     {exp.date}
                   </span>
                 </div>
-                <p className="text-sm text-char dark:text-dusk leading-relaxed mb-4">
+                <p className="text-[0.9375rem] text-char dark:text-dusk leading-relaxed mb-4">
                   {exp.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {exp.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2.5 py-0.5 text-xs font-medium rounded-full bg-ember-ink-subtle dark:bg-ember-subtle text-ember-ink dark:text-ember"
+                      className="px-2.5 py-0.5 font-heading text-[11px] font-semibold rounded-full bg-ember-ink-subtle dark:bg-ember-subtle text-ember-ink dark:text-ember"
                     >
                       {tag}
                     </span>

@@ -78,7 +78,7 @@ html.dark :focus-visible {
   .hero-scroll-exit {
     animation: hero-exit linear both;
     animation-timeline: scroll(root);
-    animation-range: 5vh 52vh;
+    animation-range: 25vh 85vh;
   }
 }
 

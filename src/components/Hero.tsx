@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="hero-scroll-exit">
         <div className="max-w-2xl mx-auto w-full">
           <FadeIn delay={0} className="mb-8">
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold font-heading tracking-tight text-forge dark:text-chalk leading-none">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold font-heading tracking-[-0.03em] text-forge dark:text-chalk leading-none">
               {firstName}
               <br />
               {lastName}

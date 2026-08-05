@@ -30,12 +30,9 @@ export default function Practices() {
                       <span className="text-xs text-gravel dark:text-smoke">Soon</span>
                     )}
                   </div>
-                  <div className="flex-1 p-3">
-                    <p className="text-sm font-semibold font-heading text-forge dark:text-chalk mb-0.5">
+                  <div className="flex-1 flex items-center justify-center py-2.5 px-3">
+                    <p className="text-sm font-semibold font-heading text-forge dark:text-chalk">
                       {item.name}
-                    </p>
-                    <p className="text-xs text-char dark:text-dusk leading-relaxed line-clamp-2">
-                      {item.note}
                     </p>
                   </div>
                 </div>

@@ -19,7 +19,7 @@ export default function Projects() {
             <FadeIn key={project.id} delay={i * 80}>
               <div className="group p-6 rounded-xl border border-linen dark:border-cinder bg-vellum dark:bg-coal hover:border-ember-ink/50 dark:hover:border-ember/45 hover:-translate-y-0.5 transition duration-200">
                 <div className="flex items-start justify-between gap-4 mb-3">
-                  <h3 className="text-lg font-semibold font-heading text-forge dark:text-chalk">
+                  <h3 className="text-base font-semibold font-heading text-forge dark:text-chalk">
                     {project.title}
                   </h3>
                   <div className="flex items-center gap-2 shrink-0">
@@ -46,7 +46,7 @@ export default function Projects() {
                     )}
                   </div>
                 </div>
-                <p className="text-sm text-char dark:text-dusk leading-relaxed mb-4">
+                <p className="text-[0.9375rem] text-char dark:text-dusk leading-relaxed mb-4">
                   {project.description}
                 </p>
                 {project.images && (
@@ -67,7 +67,7 @@ export default function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2.5 py-0.5 text-xs font-medium rounded-full bg-ember-ink-subtle dark:bg-ember-subtle text-ember-ink dark:text-ember"
+                      className="px-2.5 py-0.5 font-heading text-[11px] font-semibold rounded-full bg-ember-ink-subtle dark:bg-ember-subtle text-ember-ink dark:text-ember"
                     >
                       {tag}
                     </span>

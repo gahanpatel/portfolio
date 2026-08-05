@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# claude / ai tooling
+.claude/
+.impeccable/
+CLAUDE.md
+AGENTS.md
+PRODUCT.md
+DESIGN.md
+
+# raw photo sources
+*.HEIC
