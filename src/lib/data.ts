@@ -9,36 +9,45 @@ export const personalInfo = {
   school: "Northeastern University",
   gpa: "3.93",
   siteUrl: "https://gahanpatel.com",
-  bio: "I am a third-year student at Northeastern studying Computer Science and Business Administration. I'm passionate about leveraging technology to solve real-world problems and building things that have a real impact on users.",
+  bio: "Hey, I am a third-year student at Northeastern studying Computer Science and Business Administration. I'm passionate about leveraging technology to solve real-world problems and building things that have a real impact on users.",
   bioInterests: "From New Orleans. Running, slowly working through the Bhagavad Gita, and 70,000 Spotify minutes last year.",
 };
 
 export const experiences = [
   {
     id: "liaizon-fullstack",
-    role: "Full Stack Developer",
+    role: "Full Stack Developer, Part-Time",
     company: "Liaizon",
-    date: "Jun 2026 – Present",
+    date: "Jun 2026 – Aug 2026",
     description:
-      "Rebuilt the app's entire frontend from the ground up and built Posting Rituals, a recurring video commitment feature backed by a direct-to-S3 pipeline with async ffmpeg transcoding.",
+      "Shipped a full redesign of a social app across feed, camera, profile, messages, and settings, rebuilding the FastAPI service layer against a reworked PostgreSQL schema. Fixed large-file upload failures by moving uploads directly to S3 with asynchronous ffmpeg transcoding, which holds memory flat at any file size.",
     tags: ["React Native", "FastAPI", "SQLModel", "Python", "AWS S3", "pytest"],
   },
   {
     id: "ticker-intern",
-    role: "Software Engineering Intern",
+    role: "Software Engineering Co-op, Mobile App Development",
     company: "ticker",
-    date: "May 2026 – Present",
+    date: "May 2026 – Aug 2026",
     description:
-      "Built Learning Mode, a financial glossary that loads terms in under 45ms with delta syncing and caching. Engineered the company's first sponsored-content system, which brought in its first $1,000 in ad revenue, and revamped the Groups feature across 8 React Native screens and 30 Spring Boot endpoints.",
+      "Built Ticker's first ad monetization system on Java and Spring Boot, with Redis campaign rotation and HMAC click fingerprinting to keep invalid clicks out of billing. Also shipped an offline-first financial glossary with sub-45ms lookups and rebuilt comments and groups across eight mobile screens with role-based permissions.",
     tags: ["React Native", "Spring Boot", "Java", "MongoDB", "JUnit"],
   },
   {
+    id: "excel-with-dell",
+    role: "Business Lead",
+    company: "Excel with Dell",
+    date: "Feb 2026 – Apr 2026",
+    description:
+      "Won 1st place in an AI case competition by leading the business case for running a customer-feedback NLP pipeline on Dell PowerEdge over three competing platforms, plus the risk assessment and phased rollout. Routed low-confidence and sarcastic reviews to human review rather than trusting the model outright.",
+    tags: ["NLP", "Business Strategy", "Risk Assessment"],
+  },
+  {
     id: "oasis-instructor",
-    role: "Web Developer Instructor",
+    role: "Web Development Instructor",
     company: "Oasis at Northeastern",
     date: "Jan 2026 – Apr 2026",
     description:
-      "Instructed 10 developers across two teams building a campus marketplace and a professor review platform, guiding architecture decisions and database design.",
+      "Mentored ten developers across two teams that launched a campus marketplace app and a professor review platform, leading architecture decisions, schema design, and weekly code review. Taught Git, SQL, RESTful APIs, React, and deployment to 80+ students through weekly presentations.",
     tags: ["React", "Git", "Full-Stack", "Mentorship"],
   },
   {
